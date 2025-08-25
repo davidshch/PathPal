@@ -1,0 +1,68 @@
+name: pathpal
+description: PathPal - Social Safety Navigation App
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.13.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  
+  # HTTP Client & API
+  dio: ^5.4.0
+  retrofit: ^4.6.0
+  json_annotation: ^4.9.0
+  
+  # Navigation
+  go_router: ^13.2.0
+  
+  # Storage & Security
+  flutter_secure_storage: ^9.0.0
+  flutter_dotenv: ^5.1.0
+  
+  # UI & Utils
+  flutter_hooks: ^0.20.5
+  hooks_riverpod: ^2.5.1
+  freezed_annotation: ^2.4.1
+  
+  # Maps & Location
+  google_maps_flutter: ^2.5.2
+  geolocator: ^10.1.0
+  flutter_polyline_points: ^2.0.0
+  geocoding: ^3.0.0
+  
+  # Real-time Communication
+  web_socket_channel: ^2.4.0
+  
+  # Audio Recording
+  record: ^5.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  
+  # Code Generation
+  build_runner: ^2.4.7
+  riverpod_generator: ^2.4.0
+  retrofit_generator: ^8.2.1
+  json_serializable: ^6.7.1
+  freezed: ^2.4.7
+  riverpod_lint: ^2.3.10
+  custom_lint: ^0.6.2
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - .env
+    
+flutter_gen:
+  output: lib/gen/
+  line_length: 80

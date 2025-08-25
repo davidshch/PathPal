@@ -15,7 +15,7 @@
 
 # Real-Time GPS and Mapping
 ## Live ETA that automatically adjusts for delays
-## Automatic location sharing for trutsec connections
+## Automatic location sharing for trusted connections
 
 # Extra Safety
 ## Panic Button that discretly alerts authorities built into the app

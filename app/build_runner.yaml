@@ -1,0 +1,51 @@
+# Build runner configuration for PathPal
+targets:
+  $default:
+    builders:
+      # Riverpod code generation
+      riverpod_generator|riverpod_generator:
+        generate_for:
+          - lib/**
+        options:
+          # Generate providers for all annotated classes
+          generate_providers: true
+          # Enable async provider generation  
+          generate_async_providers: true
+          
+      # Freezed code generation
+      freezed|freezed:
+        generate_for:
+          - lib/**
+        options:
+          # Generate copyWith methods
+          copy_with: true
+          # Generate toJson/fromJson methods
+          json: true
+          # Generate equality operators
+          equal: true
+          # Generate toString methods
+          to_string: true
+          
+      # JSON serialization
+      json_serializable|json_serializable:
+        generate_for:
+          - lib/**
+        options:
+          # Generate JSON serialization code
+          any_map: false
+          checked: false
+          create_factory: true
+          create_to_json: true
+          disallow_unrecognized_keys: false
+          explicit_to_json: false
+          field_rename: none
+          ignore_unannotated: false
+          include_if_null: true
+          
+      # Retrofit code generation  
+      retrofit_generator|retrofit_generator:
+        generate_for:
+          - lib/src/core/api/api_endpoints.dart
+        options:
+          # Generate REST clients
+          generate_to_json: true
