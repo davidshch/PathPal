@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Alert - PathPal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #dc3545;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .alert-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .location-box {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .maps-link {
+            display: inline-block;
+            background-color: #4285f4;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .analysis-box {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+        }
+        .urgent {
+            color: #dc3545;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚨 EMERGENCY ALERT</h1>
+            <p>PathPal Safety Alert System</p>
+        </div>
+        
+        <div class="content">
+            <div class="alert-info">
+                <h2>Emergency Alert from <span class="urgent">{{user_name}}</span></h2>
+                <p><strong>Time:</strong> {{timestamp}}</p>
+                <p class="urgent">This is an automated emergency alert. Please contact {{user_name}} immediately.</p>
+            </div>
+
+            <div class="location-box">
+                <h3>📍 Location Information</h3>
+                <p><strong>Latitude:</strong> {{latitude}}</p>
+                <p><strong>Longitude:</strong> {{longitude}}</p>
+                <a href="{{maps_link}}" class="maps-link" target="_blank">📍 View Location on Google Maps</a>
+            </div>
+
+            <div class="analysis-box">
+                <h3>🤖 AI Situation Analysis</h3>
+                <p><em>{{ai_analysis}}</em></p>
+            </div>
+
+            <div style="margin-top: 30px; padding: 20px; background-color: #fff5f5; border-radius: 5px;">
+                <h3 class="urgent">⚠️ Immediate Action Required</h3>
+                <ul>
+                    <li><strong>Call {{user_name}} immediately</strong></li>
+                    <li>If no response, consider contacting local emergency services</li>
+                    <li>Use the location link above to assist emergency responders</li>
+                    <li>This alert was generated automatically by PathPal's safety system</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>This alert was sent by PathPal's Emergency Alert System</p>
+            <p>Generated automatically when {{user_name}} activated their panic button</p>
+            <p style="color: #999; font-size: 12px;">If you believe this is a false alarm, please contact {{user_name}} to confirm their safety</p>
+        </div>
+    </div>
+</body>
+</html>
